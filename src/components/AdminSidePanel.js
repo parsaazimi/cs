@@ -25,7 +25,7 @@ const AdminSidePanel = () => {
     return (
         <>
             <div className='w-[280px] h-full'> {/*spacing between logout and others in the list must be fixed*/} 
-                <div className='h-full '>
+                <div className='h-full text-[#4B4B4B]'>
                     <div className='flex justify-center'>
                     <div className='text-center mt-[29px]'>
                             <img src={avatar} alt='avatar' className='w-[60px]' />      
@@ -67,7 +67,7 @@ const AdminSidePanel = () => {
                         <Link className='flex text-sm font-normal items-center py-4 pr-[24px]'><img className='w-[24px] ml-[12px]' src={sendingMessagesImg} alt='sending messages' />ارسال پیام</Link>
                     </div>
                 </div>
-                <div>
+                <div className='text-[#4B4B4B]'>
                     <Link className='flex text-sm font-normal items-center py-4 pr-[24px]'><img className='w-[24px] ml-[12px]' src={logout} alt='logout' />خروج ار حساب کاربری</Link>
                 </div>
             </div>
