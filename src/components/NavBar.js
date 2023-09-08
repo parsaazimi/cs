@@ -16,7 +16,7 @@ const NavBar = () => {
                 <Link className='font-bold'>تماس با ما</Link>
             </div>
             <div>
-                <Link className='flex items-center'><img className=' w-[60px] ml-[8px]' src={avatar} alt='avatar' /><img className='rotate-90 w-[24px] h-[24px]' src={arrowDown} alt='arrow-down' /></Link>
+                <Link className='flex items-center'><img className=' w-[42px] ml-[8px]' src={avatar} alt='avatar' /><img className='rotate-90 w-[24px] h-[24px]' src={arrowDown} alt='arrow-down' /></Link>
             </div>
         </div>
         <div>
