@@ -2,6 +2,7 @@ import React from 'react';
 import Dashboard from './Dashboard';
 import NavBar from './NavBar';
 import AdminSidePanel from './AdminSidePanel';
+import MembershipCard from './MembershipCard';
 
 const LandingPage = () => {
     return (
@@ -9,7 +10,8 @@ const LandingPage = () => {
             <NavBar />
             <div className='flex'>
                 <AdminSidePanel />
-                <Dashboard />
+                {/* <Dashboard /> */}
+                <MembershipCard />
             </div>
         </div>
     );
