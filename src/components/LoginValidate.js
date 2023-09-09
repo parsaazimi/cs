@@ -1,17 +1,19 @@
 export const validate = (data, type) =>{
     const errors = {}    
-    if(!data.email){
-        errors.email = 'Email is required'
-    }else if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(data.email)){
-        errors.email = 'Email is invalid'
-    }else{
-        delete errors.email
+    if(!data.username){
+        errors.username = 'شماره موبایل یا ایمیل الزامی است'
+    }
+    // else if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(data.username)){
+    //     errors.username = 'Email is invalid'
+    // }
+    else{
+        delete errors.username
     }
 
     if(!data.password){
-        errors.password = 'Password is required'
+        errors.password = 'رمزعبور الزامی است'
     }else if(data.password.length < 6){
-        errors.password = 'Password must be at least 6 charachters'
+        errors.password = 'رمزعبور باید حداقل 6 کاراکتر باشد'
     }else{
         delete errors.password
     }

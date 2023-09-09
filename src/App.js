@@ -6,8 +6,9 @@ import LoginPage from "./components/LoginPage";
 function App() {
   return (
     <div>
+      <LandingPage />
       {/* <LoginPage /> */}
-      <Dashboard />
+      {/* <Dashboard /> */}
     </div>
   );
 }
