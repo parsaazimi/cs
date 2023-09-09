@@ -3,4 +3,5 @@
 @tailwind utilities;
 *{
     font-family: 'Iranian Sans', sans-serif;
+    box-sizing: border-box;
 }

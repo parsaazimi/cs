@@ -24,8 +24,8 @@ const AdminSidePanel = () => {
     }
     return (
         <>
-            <div className='w-[280px] h-full'> {/*spacing between logout and others in the list must be fixed*/} 
-                <div className='h-full text-[#4B4B4B]'>
+            <div className='w-[280px] h-[86.8vh] flex-col content-between'> {/*spacing between logout and others in the list must be fixed*/} 
+                <div className='h-full text-[#4B4B4B] w-full'>
                     <div className='flex justify-center'>
                     <div className='text-center mt-[29px]'>
                             <img src={avatar} alt='avatar' className='w-[60px]' />      
@@ -34,11 +34,11 @@ const AdminSidePanel = () => {
                     </div>
                     </div>
                     <div>
-                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px]'><img className='w-[24px] ml-[12px]' src={dashboardImg} alt='dashboard' />داشبورد</Link>
-                        <ul className='flex-col text-sm font-normal items-center  '>
-                            <label className='flex cursor-pointer py-4 pr-[24px]' ref={label} onClick={dropDownHandler}>
+                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px]' src={dashboardImg} alt='dashboard' />داشبورد</Link>
+                        <ul className='flex-col text-sm font-normal items-center'>
+                            <label className='flex cursor-pointer py-4 pr-[24px] hover:bg-[#efefef]' ref={label} onClick={dropDownHandler}>
                                 <img className='w-[24px] ml-[12px]' src={documents} alt='news' />
-                                <div className='flex justify-between w-full'>
+                                <div className='flex justify-between w-full '>
                                     <p>دوره ها</p>
                                     <img className='rotate-90 w-[24px] h-[24px] ml-[12px]' src={arrowDown} alt='arrow-down' />
                                 </div> 
@@ -54,8 +54,8 @@ const AdminSidePanel = () => {
                                 </Link> 
                             </li>
                         </ul>
-                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px]'><img className='w-[24px] ml-[12px]' src={newsImg} alt='news' />اخبار</Link>
-                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px]'><img className='w-[24px] ml-[12px]' src={userCards} alt='membership card' />
+                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px]' src={newsImg} alt='news' />اخبار</Link>
+                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px]' src={userCards} alt='membership card' />
                             <div className='flex justify-between w-full items-center'>
                                 <label>
                                     کارت عضویت  
@@ -63,12 +63,12 @@ const AdminSidePanel = () => {
                                 <span className='ml-[15px] bg-[#E24156] px-[4px] py-[1px] rounded text-white'>4</span> {/*takes number from back */}
                             </div>
                         </Link>
-                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px]'><img className='w-[24px] ml-[12px]' src={members} alt='members' />اعضا</Link>
-                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px]'><img className='w-[24px] ml-[12px]' src={sendingMessagesImg} alt='sending messages' />ارسال پیام</Link>
+                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px]' src={members} alt='members' />اعضا</Link>
+                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px]' src={sendingMessagesImg} alt='sending messages' />ارسال پیام</Link>
                     </div>
                 </div>
                 <div className='text-[#4B4B4B]'>
-                    <Link className='flex text-sm font-normal items-center py-4 pr-[24px]'><img className='w-[24px] ml-[12px]' src={logout} alt='logout' />خروج ار حساب کاربری</Link>
+                    <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px]' src={logout} alt='logout' />خروج ار حساب کاربری</Link>
                 </div>
             </div>
 

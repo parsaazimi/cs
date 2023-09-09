@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import React, { useEffect, useState } from 'react';
 import { validate } from './LoginValidate';
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 const LoginPage = () => {
 
     const [touched, isTouched] = useState({})
@@ -27,20 +28,22 @@ const LoginPage = () => {
 
     const submitHandler = event=>{
         event.preventDefault()
-        if(!Object.keys(errors).length){
-            notify("successfully Loged In", 'success')
-        }else{
-            notify("invalid inputs")
-            isTouched({
-                username:true,
-                password:true,
-            })
-        }
+        // if(!Object.keys(errors).length){
+        //     notify("successfully Loged In", 'success')
+        // }else{
+        //     notify("invalid inputs")
+        //     isTouched({
+        //         username:true,
+        //         password:true,
+        //     })
+        // }
+        axios.get('https://api.csaiauk.ir/admin/members')
+        .then(res=>console.log(res))
     }
     
     return (
         <>
-            <div className='border-4'>
+            <div className='border-4 flex'>
                 <form onSubmit={submitHandler} className='pr-[120px]'>
                     <h2 className='text-[20px] font-bold mb-[16px] text-[#222222]'>خوش آمدید!</h2>
                     <h2 className='text-[12px] text-[#707070] mb-[40px]'>اطلاعات خود را برای دسترسی به حساب وارد کنید</h2>
@@ -54,17 +57,19 @@ const LoginPage = () => {
                         <input className='w-[590px] text-[16px] flex border-[1px] border-[#9A9A9A] rounded pr-[16px] py-[12px] mt-[16px]' type='password' name='password' value={data.password} onChange={changeHandler} onFocus={focusHandler} placeholder='رمز عبور خود را وارد کنید'/>
                         {errors.password && touched.password && <span>{errors.password}</span>}
                     </div>
-                    <div className='mt-[16px]'>
-                        <label>مرا به خاطر بسپار</label>
-                        <input className='' type='checkbox' name='checkbox' value={data.checkbox} onChange={changeHandler} onFocus={focusHandler}/>
+                    <div className='flex mt-[16px] items-center'>
+                        <input className='ml-[12px]' type='checkbox' name='checkbox' value={data.checkbox} onChange={changeHandler} onFocus={focusHandler}/>
+                        <label className='text-[#707070]'>مرا به خاطر بسپار</label>
                         {errors.checkbox && touched.checkbox && <span>{errors.checkbox}</span>}
                     </div>
-                    <div className=''>
-                        
-                        <button type='submit' onClick={notify} className=''>Login</button>
+                    <div>
+                        <button type='submit' onClick={notify} className='px-[274px] py-[10px] bg-[#0E8AF2] mt-[25px] text-white rounded text-[18px] font-bold'>ورود</button>
                     </div>
                     </form>
                     <ToastContainer />
+                    <div>
+                        salam
+                    </div>
             </div>
         </>
     );
