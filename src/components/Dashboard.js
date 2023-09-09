@@ -42,9 +42,9 @@ const Dashboard = () => {
         <>
             <div>
                 <NavBar/>
-                <div className='flex w-full'>
+                <div className='flex'>
                     <AdminSidePanel/>
-                    <div className='p-[20px] '>
+                    <div className='p-[30px] bg-[#F8F8FF] h-[92.2vh] mt-[4px]'>
                         <h1 className='text-[18px] font-bold py-[20px]'>داشبورد</h1>
                         {/* <DashboardCard color='#6049CD' name="تعداد کل اعضا" number="10" unit="نفر"/> takes values from back and uses map to iterate on data array */}
                         <div className='flex flex-wrap'>

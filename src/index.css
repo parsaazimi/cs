@@ -4,4 +4,6 @@
 *{
     font-family: 'Iranian Sans', sans-serif;
     box-sizing: border-box;
+    user-select: none;
+    transition: all 0.2s ease;
 }
