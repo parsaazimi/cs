@@ -23,7 +23,7 @@ const AdminSidePanel = () => {
         label.current.classList.toggle("pr-[19.7px]")        
     }
     return (
-        <>
+        <div>
             <div className='w-[280px] h-[86.8vh] flex-col content-between'> {/*spacing between logout and others in the list must be fixed*/} 
                 <div className='h-full text-[#4B4B4B] w-full'>
                     <div className='flex justify-center'>
@@ -72,7 +72,7 @@ const AdminSidePanel = () => {
                 </div>
             </div>
 
-        </>
+        </div>
     );
 };
 

@@ -4,101 +4,62 @@ const MembershipCard = () => {
     const [members, setMembers] = useState([
         {
             id:1,
-            fullName:'parsa azimi',
+            fullName:'پارسا عظیمی',
             studentNo:'123456789',
             nationalNo:'987654321',
             joinDate:'1402/02/02',
             phoneNo:'09188888888',
-            isVerified:true,
-            needsChange:false,
+            isVerified:false,
+            isComplete:false,
         },
         {
             id:2,
-            fullName:'parsa azimi',
+            fullName:'پارسا عظیمی',
             studentNo:'123456789',
             nationalNo:'987654321',
             joinDate:'1402/02/02',
             phoneNo:'09188888888',
-            isVerified:true,
-            needsChange:false,
+            isVerified:false,
+            isComplete:true,
         },
         {
             id:3,
-            fullName:'parsa azimi',
+            fullName:'پارسا عظیمی',
             studentNo:'123456789',
             nationalNo:'987654321',
             joinDate:'1402/02/02',
             phoneNo:'09188888888',
-            isVerified:true,
-            needsChange:false,
-        },
+            isVerified:false,
+            isComplete:false,
+        }
+        
     ])
     return (
         <div>
-            <div className='p-[30px] bg-[#F8F8FF] h-[92.2vh] w-[85.4vw] mt-[4px]'>
+            <div className='p-[30px] bg-[#F8F8FF] h-[92.2vh] w-[84.5vw] mt-[4px]'>
                         <h1 className='text-[18px] font-bold py-[20px]'>کارت عضویت</h1>
-                        {/* <div className='flex flex-wrap'>
-                            {cards.map(card => <DashboardCard name= {card.name} color = {card.color} unit = {card.unit}/>)}
-                        </div> */}
-                        {/* <table className='border '>
-                            <tr>
-                                <th>#</th>
-                                <th>نام و نام خانوادگی</th>
-                                <th>شماره دانشجویی</th>
-                                <th>کد ملی</th>
-                                <th>تاریخ عضویت</th>
-                                <th>شماره تلفن</th>
-                                <th>وضعیت</th>
-                                <th>احراز هویت</th>
-                            </tr>
-                            <tr>
-
-                                {members.map(member => <tr>{member.id}</tr>)}
-                            </tr>
-                            <tr>
-                                {members.map(member => <td>{member.fullName}</td>)}
-
-                            </tr>
-                                {members.map(member => <tr>{member.studentNo}</tr>)}
-                                {members.map(member => <tr>{member.nationalNo}</tr>)}
-                                {members.map(member => <tr>{member.joinDate}</tr>)}
-                                {members.map(member => <tr>{member.phoneNo}</tr>)}
-                                {/* {members.map(member => <tr>{member.id}</tr>)}
-                                {members.map(member => <tr>{member.id}</tr>)}    
-                        </table> */}
                         <div className='border-2'>
                             <div className='flex justify-evenly'> 
-                                <h1 className='m-[10px] bg-red-100'>#</h1>
-                                <h1 className='m-[10px] bg-red-100'>نام و نام خانوادگی</h1>
-                                <h1 className='m-[10px] bg-red-100'>شماره دانشجویی</h1>
-                                <h1 className='m-[10px] bg-red-100'>کد ملی</h1>
-                                <h1 className='m-[10px] bg-red-100'>تاریخ عضویت</h1>
-                                <h1 className='m-[10px] bg-red-100'>شماره تلفن</h1>
-                                <h1 className='m-[10px] bg-red-100'>وضعیت</h1>
-                                <h1 className='m-[10px] bg-red-100'>احراز هویت</h1>
+                                <h1 className='m-[10px] p-[5px] items-center text-[#4B4B4B]'>#</h1>
+                                <h1 className='m-[10px] p-[5px] items-center text-[#4B4B4B]'>نام و نام خانوادگی</h1>
+                                <h1 className='m-[10px] p-[5px] items-center text-[#4B4B4B]'>شماره دانشجویی</h1>
+                                <h1 className='m-[10px] p-[5px] items-center text-[#4B4B4B]'>کد ملی</h1>
+                                <h1 className='m-[10px] p-[5px] items-center text-[#4B4B4B]'>تاریخ عضویت</h1>
+                                <h1 className='m-[10px] p-[5px] items-center text-[#4B4B4B]'>شماره تلفن</h1>
+                                <h1 className='m-[10px] p-[5px] items-center text-[#4B4B4B]'>وضعیت</h1>
+                                <h1 className='m-[10px] p-[5px] items-center text-[#4B4B4B]'>احراز هویت</h1>
                             </div>
                             {members.map(member => 
-                            // `flex justify-evenly {${member.id}  % 2 ? bg-black-100 : bg-red-100} `
-                            <div className={member.id % 2 ? 'flex justify-evenly bg-red-100': 'flex justify-evenly'} key={member.id}>
-                                <h1 className='m-[10px] bg-red-100'>{member.id}</h1>
-                                <h1 className='m-[10px] bg-red-100'>{member.fullName}</h1>
-                                <h1 className='m-[10px] bg-red-100'>{member.studentNo}</h1>
-                                <h1 className='m-[10px] bg-red-100'>{member.nationalNo}</h1>
-                                <h1 className='m-[10px] bg-red-100'>{member.joinDate}</h1>
-                                <h1 className='m-[10px] bg-red-100'>{member.phoneNo}</h1>
-                                <h1 className='m-[10px] bg-red-100'>وضعیت</h1>
-                                <h1 className='m-[10px] bg-red-100'>احراز هویت</h1>
+                            <div className={member.id % 2 ? 'flex justify-evenly bg-red-100 items-center': 'items-center flex justify-evenly'} key={member.id}>
+                                <h1 className='m-[10px] mr-[20px]'>{member.id}</h1>
+                                <h1 className='m-[10px] mr-[55px] max-w-[100px] min-w-[100px] text-center flex-wrap'>{member.fullName}</h1>
+                                <h1 className='m-[10px] pl-[5px]  mr-[50px] max-w-[100px] min-w-[100px]'>{member.studentNo}</h1>
+                                <h1 className='m-[10px] pl-[5px] max-w-[100px] min-w-[100px] text-center'>{member.nationalNo}</h1>
+                                <h1 className='m-[10px] pl-[5px] max-w-[100px] min-w-[100px] text-center'>{member.joinDate}</h1>
+                                <h1 className='m-[10px] pl-[5px] max-w-[100px] min-w-[100px] text-center'>{member.phoneNo}</h1>
+                                {member.isComplete ? <h1 className='m-[10px] py-[5px] bg-[#FFD699] min-w-[100px] rounded-2xl text-center'>انتظار</h1> : <h1 className='m-[10px] rounded-2xl py-[5px] bg-[#FF9C9C] max-w-[100px] min-w-[100px] text-center'>تغییرات</h1> }
+                                <h1 className='m-[10px] pl-[5px] max-w-[100px] min-w-[100px] text-center'>احراز هویت</h1>
                             </div>)}
-                            {/* <div className='flex'>
-                                <h1 className='m-[10px]'>#</h1>
-                                <h1 className='m-[10px]'>نام و نام خانوادگی</h1>
-                                <h1 className='m-[10px]'>شماره دانشجویی</h1>
-                                <h1 className='m-[10px]'>کد ملی</h1>
-                                <h1 className='m-[10px]'>تاریخ عضویت</h1>
-                                <h1 className='m-[10px]'>شماره تلفن</h1>
-                                <h1 className='m-[10px]'>وضعیت</h1>
-                                <h1 className='m-[10px]'>احراز هویت</h1>
-                            </div> */}
                         </div>
             </div>
         </div>
