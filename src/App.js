@@ -3,6 +3,7 @@ import LoginPage from "./components/LoginPage";
 import Dashboard from "./components/Dashboard";
 import MembershipCard from "./components/MembershipCard";
 import UserDataPage from "./components/UserDataPage";
+import MembersPage from "./components/MembersPage";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/membershipcard' element={<MembershipCard />} />
         <Route path='/userdatapage' element={<UserDataPage />} />
+        <Route path='/members' element={<MembersPage />} />
       </Routes>
             
         

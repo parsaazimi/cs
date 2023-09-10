@@ -63,7 +63,7 @@ const AdminSidePanel = () => {
                                 <span className='ml-[15px] bg-[#E24156] px-[4px] py-[1px] rounded text-white'>4</span> {/*takes number from back */}
                             </div>
                         </Link>
-                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={members} alt='members' />اعضا</Link>
+                        <Link to='/members' className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={members} alt='members' />اعضا</Link>
                         <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={sendingMessagesImg} alt='sending messages' />ارسال پیام</Link>
                     </div>
                 </div>
