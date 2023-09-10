@@ -32,8 +32,19 @@ const LoginPage = () => {
         event.preventDefault()
         if(!Object.keys(errors).length){
             notify("successfully Loged In", 'success')
-            navigate('/dashboard')
-            
+            // navigate('/dashboard')
+            // axios.get('https://api.csaiauk.ir/admin/members',{"filters": { "isAccepted": true }} )
+            // .then(res=> console.log(res) )
+            // axios.get('https://api.csaiauk.ir/admin/members', {
+            //     headers: {
+            //         'Content-type': 'application/json'
+            //     },
+            //     body: JSON.stringify(data)
+            //     })
+            //     .then((response) => response.json())
+            //     .then((result) => {
+            //     console.log(result)
+            // })
         }else{
             notify("invalid inputs")
             isTouched({
