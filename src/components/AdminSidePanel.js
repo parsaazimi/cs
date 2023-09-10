@@ -34,7 +34,7 @@ const AdminSidePanel = () => {
                     </div>
                     </div>
                     <div>
-                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px] pl-[213px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={dashboardImg} alt='dashboard' />داشبورد</Link>
+                        <Link to='/dashboard' className='flex text-sm font-normal items-center py-4 pr-[24px] pl-[213px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={dashboardImg} alt='dashboard' />داشبورد</Link>
                         <ul className='flex-col text-sm font-normal items-center'>
                             <label className='flex cursor-pointer py-4 pr-[24px] hover:bg-[#efefef]' ref={label} onClick={dropDownHandler}>
                                 <img className='w-[24px] ml-[12px] opacity-70' src={documents} alt='news' />
@@ -56,8 +56,8 @@ const AdminSidePanel = () => {
                         </ul>
                         <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={newsImg} alt='news' />اخبار</Link>
                         <Link to='/membershipcard' className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={userCards} alt='membership card' />
-                            <div className='flex justify-between w-full items-center'>
-                                <label>
+                            <div className='flex justify-between w-full items-center cursor-pointer '>
+                                <label className='cursor-pointer'>
                                     کارت عضویت  
                                 </label>
                                 <span className='ml-[15px] bg-[#E24156] px-[4px] py-[1px] rounded text-white'>4</span> {/*takes number from back */}

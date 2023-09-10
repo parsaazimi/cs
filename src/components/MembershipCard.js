@@ -41,9 +41,9 @@ const MembershipCard = () => {
         <div>
             <div>
                 <NavBar />
-                <div className='flex'>
+                <div className='flex '>
                     <AdminSidePanel />
-                    <div className='p-[30px] bg-[#F8F8FF] h-[92.2vh] w-[85.3vw] mt-[4px]'>
+                    <div className='p-[30px] bg-[#F8F8FF] min-h-[92.2vh] w-[85.3vw] mt-[4px]'>
                                 <h1 className='text-[18px] font-bold py-[20px]'>کارت عضویت</h1>
                                 <div className='border-2 bg-[#ffffff] rounded-xl'>
                                     <div className='flex justify-evenly'> 

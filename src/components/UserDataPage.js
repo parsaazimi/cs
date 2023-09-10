@@ -9,7 +9,7 @@ const UserDataPage = () => {
                 <NavBar />
                 <div className='flex'>
                     <AdminSidePanel />
-                    <div className='p-[30px] bg-[#F8F8FF] h-[92.2vh] w-[85.3vw] mt-[4px]'>
+                    <div className='p-[30px] bg-[#F8F8FF] min-h-[92.2vh] w-[85.3vw] mt-[4px]'>
                         <h1 className='text-[18px] font-bold py-[20px]'>کارت عضویت</h1>
                         <div className='bg-[#fff]'>
                             <h2 className='border-b-[1px] text-[16px] font-bold p-[17px]'>اطلاعات کاربر</h2>
@@ -29,8 +29,13 @@ const UserDataPage = () => {
                                             <span className='flex flex-wrap w-[100px]'>پارسا</span>
                                         </div>
                                     </div>
-                                    <div className='w-[126px] h-[157px] bg-blue-100 absolute right-[1740px]'>
-                                            عکس
+                                    <div className='absolute right-[1740px]'>
+                                        <div className='w-[126px] h-[157px] bg-blue-100'>
+                                                عکس
+                                        </div>
+                                        <div>
+                                            دانلود
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='flex w-[800px] justify-between mt-[16px]'>
@@ -81,6 +86,7 @@ const UserDataPage = () => {
                                         <div className='w-[270px] h-[159px] bg-blue-100'>
                                             عکس کارت دانشجویی
                                         </div>
+                                        <div>دانلود</div>
                                     </div>
                                 </div>
                                 <h1 className='mt-[53px]'>ثبت وضعیت</h1>
