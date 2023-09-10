@@ -55,7 +55,7 @@ const AdminSidePanel = () => {
                             </li>
                         </ul>
                         <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={newsImg} alt='news' />اخبار</Link>
-                        <Link className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={userCards} alt='membership card' />
+                        <Link to='/membershipcard' className='flex text-sm font-normal items-center py-4 pr-[24px] hover:bg-[#efefef]'><img className='w-[24px] ml-[12px] opacity-70' src={userCards} alt='membership card' />
                             <div className='flex justify-between w-full items-center'>
                                 <label>
                                     کارت عضویت  

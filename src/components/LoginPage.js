@@ -6,6 +6,7 @@ import { validate } from './LoginValidate';
 import styles from './ComponentsStyles.module.css'
 import mainLogo from '../assets/logo-purple.png'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
 
     const [touched, isTouched] = useState({})
@@ -26,11 +27,12 @@ const LoginPage = () => {
     const focusHandler = event=>{
         isTouched({...touched, [event.target.name]:true})
     }
-
+    const navigate = useNavigate()
     const submitHandler = event=>{
         event.preventDefault()
         if(!Object.keys(errors).length){
             notify("successfully Loged In", 'success')
+            navigate('/dashboard')
             
         }else{
             notify("invalid inputs")

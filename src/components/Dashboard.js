@@ -39,14 +39,20 @@ const Dashboard = () => {
 
     ])
     return (
-        <>
-            <div className='p-[30px] bg-[#F8F8FF] h-[92.2vh] mt-[4px]'>
-                <h1 className='text-[18px] font-bold py-[20px]'>داشبورد</h1>
-                <div className='flex flex-wrap'>
-                    {cards.map(card => <DashboardCard name= {card.name} color = {card.color} unit = {card.unit}/>)}
+        <div>
+            <div>
+                <NavBar />
+                <div className='flex'>
+                    <AdminSidePanel />
+                    <div className='p-[30px] bg-[#F8F8FF] h-[92.2vh] mt-[4px]'>
+                        <h1 className='text-[18px] font-bold py-[20px]'>داشبورد</h1>
+                        <div className='flex flex-wrap'>
+                            {cards.map(card => <DashboardCard name= {card.name} color = {card.color} unit = {card.unit}/>)}
+                        </div>
+                </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

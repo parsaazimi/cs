@@ -1,5 +1,6 @@
 .logInContainer{
     background: url('../assets/bg.jpg');
     background-repeat: no-repeat;
+    z-index: 10;
     height: 100vh;
 }
